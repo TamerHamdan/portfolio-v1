@@ -121,10 +121,13 @@ body {
    justify-content: center;
    width: 24px;
    height: 24px;
+   -webkit-user-drag: none;
+   -webkit-tap-highlight-color: transparent;
 }
 
 .social-links a:hover {
    color: #778DA9;
+   text-decoration: none;
 }
 
 .social-links i {
