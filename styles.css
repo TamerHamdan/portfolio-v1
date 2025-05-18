@@ -5,29 +5,43 @@
    box-sizing: border-box;
 }
 
+html,
+body {
+   height: 100%;
+   width: 100%;
+   background-color: #1B263B;
+   overflow-x: hidden;
+}
+
 body {
    font-family: 'Arial', sans-serif;
    line-height: 1.6;
-   color: #333;
+   color: #0D1B2A;
+   position: relative;
+   min-height: 100vh;
 }
 
 /* Container layout */
 .container {
    display: flex;
    min-height: 100vh;
+   width: 100%;
+   position: relative;
+   background-color: #1B263B;
 }
 
 /* Left side styles */
 .left-side {
    width: 30%;
-   background-color: #2c3e50;
-   color: white;
+   background-color: #1B263B;
+   color: #E0E1DD;
    padding: 2rem;
    position: fixed;
    height: 100vh;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   z-index: 10;
 }
 
 .profile {
@@ -40,7 +54,7 @@ body {
    height: 150px;
    border-radius: 50%;
    margin-bottom: 1rem;
-   border: 3px solid #fff;
+   border: 3px solid #E0E1DD;
 }
 
 .profile h1 {
@@ -49,7 +63,7 @@ body {
 }
 
 .title {
-   color: #ecf0f1;
+   color: #E0E1DD;
    font-size: 1.1rem;
 }
 
@@ -62,14 +76,14 @@ body {
 }
 
 .navigation a {
-   color: white;
+   color: #E0E1DD;
    text-decoration: none;
    font-size: 1.1rem;
    transition: color 0.3s ease;
 }
 
 .navigation a:hover {
-   color: #3498db;
+   color: #778DA9;
 }
 
 .social-links {
@@ -80,13 +94,13 @@ body {
 }
 
 .social-links a {
-   color: white;
+   color: #E0E1DD;
    text-decoration: none;
    transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-   color: #3498db;
+   color: #778DA9;
 }
 
 /* Right side styles */
@@ -94,7 +108,34 @@ body {
    flex: 1;
    margin-left: 30%;
    padding: 2rem;
-   background-color: #f9f9f9;
+   background-color: #E0E1DD;
+   font-family: 'JetBrains Mono', monospace;
+   min-height: 100vh;
+   width: 70%;
+}
+
+.right-side h2 {
+   color: #415A77;
+   margin-bottom: 1.5rem;
+   font-size: 2rem;
+   font-weight: 600;
+}
+
+.right-side p {
+   font-weight: 400;
+}
+
+.project-card h3 {
+   font-weight: 600;
+}
+
+.skill {
+   background-color: #415A77;
+   color: #E0E1DD;
+   padding: 0.8rem;
+   border-radius: 4px;
+   text-align: center;
+   font-weight: 500;
 }
 
 section {
@@ -103,12 +144,7 @@ section {
    background-color: white;
    border-radius: 8px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-   color: #2c3e50;
-   margin-bottom: 1.5rem;
-   font-size: 2rem;
+   width: 100%;
 }
 
 /* Project grid */
@@ -119,7 +155,7 @@ h2 {
 }
 
 .project-card {
-   background-color: #f8f9fa;
+   background-color: #E0E1DD;
    padding: 1.5rem;
    border-radius: 6px;
    transition: transform 0.3s ease;
@@ -136,18 +172,12 @@ h2 {
    gap: 1rem;
 }
 
-.skill {
-   background-color: #3498db;
-   color: white;
-   padding: 0.8rem;
-   border-radius: 4px;
-   text-align: center;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
    .container {
       flex-direction: column;
+      width: 100%;
+      background-color: #1B263B;
    }
 
    .left-side {
@@ -155,11 +185,14 @@ h2 {
       width: 100%;
       height: auto;
       padding: 1rem;
+      background-color: #1B263B;
    }
 
    .right-side {
       margin-left: 0;
       padding: 1rem;
+      width: 100%;
+      background-color: #E0E1DD;
    }
 
    .profile-img {
@@ -186,4 +219,11 @@ h2 {
 /* Smooth scrolling */
 html {
    scroll-behavior: smooth;
+   background-color: #1B263B;
+}
+
+/* Fix for iOS overscroll */
+body {
+   overscroll-behavior: none;
+   -webkit-overflow-scrolling: touch;
 }
