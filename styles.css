@@ -46,7 +46,8 @@ body {
 
 .profile {
    text-align: center;
-   margin-bottom: 2rem;
+   margin-top: 4rem;
+   margin-bottom: 1rem;
 }
 
 .profile-img {
@@ -73,6 +74,11 @@ body {
    font-size: 1rem;
    margin-bottom: 0.5rem;
    font-style: italic;
+}
+
+.navigation {
+   margin-top: 3rem;
+   padding-bottom: 12rem;
 }
 
 .navigation ul {
@@ -254,7 +260,7 @@ section::before {
    }
 
    .profile {
-      text-align: center;
+      margin-top: 0;
       margin-bottom: 2rem;
    }
 
@@ -295,6 +301,11 @@ section::before {
 
    .desktop-break {
       display: none;
+   }
+
+   .navigation {
+      margin-top: 0;
+      padding-bottom: 0;
    }
 }
 
