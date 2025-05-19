@@ -1,3 +1,16 @@
+/* Global Variables */
+:root {
+   --primary-bg: #1B263B;
+   --secondary-bg: #E0E1DD;
+   --text-light: #E0E1DD;
+   --text-dark: #0D1B2A;
+   --accent: #415A77;
+   --accent-light: #778DA9;
+   --border-radius: 8px;
+   --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   --transition: all 0.3s ease;
+}
+
 /* Smooth scrolling */
 html {
    scroll-behavior: smooth;
@@ -10,11 +23,12 @@ html {
    box-sizing: border-box;
 }
 
+/* Document setup */
 html,
 body {
    height: 100%;
    width: 100%;
-   background-color: #1B263B;
+   background-color: var(--primary-bg);
    overflow-x: hidden;
    scroll-behavior: smooth;
 }
@@ -22,11 +36,12 @@ body {
 body {
    font-family: 'Arial', sans-serif;
    line-height: 1.6;
-   color: #0D1B2A;
+   color: var(--text-dark);
    position: relative;
    min-height: 100vh;
    overflow-y: auto;
    -webkit-overflow-scrolling: touch;
+   overscroll-behavior: none;
 }
 
 /* Container layout */
@@ -35,15 +50,15 @@ body {
    min-height: 100vh;
    width: 100%;
    position: relative;
-   background-color: #1B263B;
+   background-color: var(--primary-bg);
    overflow: visible;
 }
 
 /* Left side styles */
 .left-side {
    width: 30%;
-   background-color: #1B263B;
-   color: #E0E1DD;
+   background-color: var(--primary-bg);
+   color: var(--text-light);
    padding: 2rem;
    position: fixed;
    height: 100vh;
@@ -60,33 +75,26 @@ body {
    margin-bottom: 1rem;
 }
 
-.profile-img {
-   width: 150px;
-   height: 150px;
-   border-radius: 50%;
-   margin-bottom: 1rem;
-   border: 3px solid #E0E1DD;
-}
-
 .profile h1 {
    font-size: 1.8rem;
    margin-bottom: 0.5rem;
-   color: #E0E1DD;
+   color: var(--text-light);
 }
 
 .title {
-   color: #E0E1DD;
+   color: var(--text-light);
    font-size: 1.1rem;
    margin-bottom: 0.3rem;
 }
 
 .tagline {
-   color: #778DA9;
+   color: var(--accent-light);
    font-size: 1rem;
    margin-bottom: 0.5rem;
    font-style: italic;
 }
 
+/* Navigation */
 .navigation {
    margin-top: 3rem;
    padding-bottom: 12rem;
@@ -102,16 +110,16 @@ body {
 }
 
 .navigation a {
-   color: #E0E1DD;
+   color: var(--text-light);
    text-decoration: none;
    font-size: 1.1rem;
-   transition: all 0.3s ease;
+   transition: var(--transition);
    position: relative;
    padding: 0.3rem 0;
 }
 
 .navigation a:hover {
-   color: #778DA9;
+   color: var(--accent-light);
 }
 
 .navigation a::after {
@@ -121,8 +129,8 @@ body {
    height: 2px;
    bottom: 0;
    left: 50%;
-   background-color: #778DA9;
-   transition: all 0.3s ease;
+   background-color: var(--accent-light);
+   transition: var(--transition);
    transform: translateX(-50%);
 }
 
@@ -130,6 +138,7 @@ body {
    width: 100%;
 }
 
+/* Social links */
 .social-links {
    display: flex;
    justify-content: center;
@@ -139,9 +148,9 @@ body {
 }
 
 .social-links a {
-   color: #E0E1DD;
+   color: var(--text-light);
    text-decoration: none;
-   transition: all 0.3s ease;
+   transition: var(--transition);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -152,13 +161,12 @@ body {
 }
 
 .social-links a:hover {
-   color: #778DA9;
-   text-decoration: none;
+   color: var(--accent-light);
 }
 
 .social-links i {
    font-size: 24px;
-   transition: all 0.3s ease;
+   transition: var(--transition);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -173,7 +181,7 @@ body {
    flex: 1;
    margin-left: 30%;
    padding: 2rem;
-   background-color: #E0E1DD;
+   background-color: var(--secondary-bg);
    font-family: 'JetBrains Mono', monospace;
    min-height: 100vh;
    width: 70%;
@@ -185,43 +193,23 @@ body {
 }
 
 .right-side h2 {
-   color: #415A77;
+   color: var(--accent);
    margin-bottom: 1.5rem;
    font-size: 2rem;
    font-weight: 600;
-   font-family: 'JetBrains Mono', monospace;
 }
 
 .right-side p {
    font-weight: 400;
-   font-family: 'JetBrains Mono', monospace;
 }
 
-.project-card h3 {
-   font-weight: 600;
-   font-family: 'JetBrains Mono', monospace;
-}
-
-.project-card p {
-   font-family: 'JetBrains Mono', monospace;
-}
-
-.skill {
-   background-color: #415A77;
-   color: #E0E1DD;
-   padding: 0.8rem;
-   border-radius: 4px;
-   text-align: center;
-   font-weight: 500;
-   font-family: 'JetBrains Mono', monospace;
-}
-
+/* Section styling */
 section {
    margin-bottom: 3rem;
    padding: 2rem;
    background-color: white;
-   border-radius: 8px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   border-radius: var(--border-radius);
+   box-shadow: var(--box-shadow);
    width: 100%;
    position: relative;
    scroll-margin-top: 2rem;
@@ -234,8 +222,8 @@ section::before {
    left: 0;
    right: 0;
    height: 4px;
-   background-color: #415A77;
-   border-radius: 8px 8px 0 0;
+   background-color: var(--accent);
+   border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 /* Project grid */
@@ -246,20 +234,29 @@ section::before {
 }
 
 .project-card {
-   background-color: #E0E1DD;
+   background-color: var(--secondary-bg);
    padding: 1.5rem;
    border-radius: 6px;
-   transition: all 0.3s ease;
+   transition: var(--transition);
 }
 
 .project-card:hover {
    transform: translateY(-5px);
-   background-color: #415A77;
-   color: #E0E1DD;
+   background-color: var(--accent);
+   color: var(--text-light);
+}
+
+.project-card h3 {
+   font-weight: 600;
+   margin-bottom: 0.5rem;
 }
 
 .project-card:hover h3 {
-   color: #E0E1DD;
+   color: var(--text-light);
+}
+
+.project-card p {
+   font-size: 0.95rem;
 }
 
 /* Skills grid */
@@ -269,13 +266,69 @@ section::before {
    gap: 1rem;
 }
 
-/* Responsive design */
+.skill {
+   background-color: var(--accent);
+   color: var(--text-light);
+   padding: 0.8rem;
+   border-radius: 4px;
+   text-align: center;
+   font-weight: 500;
+}
+
+/* Contact links styles */
+.contact-links {
+   margin: 0.2rem 0 0.3rem;
+   padding: 0 1.5rem;
+   text-align: center;
+}
+
+.contact-item {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: var(--text-light);
+   text-decoration: none;
+   margin-bottom: 1rem;
+   transition: color 0.3s ease;
+   font-size: 0.9rem;
+}
+
+.contact-item:hover {
+   color: var(--accent-light);
+}
+
+.contact-item i {
+   margin-right: 0.8rem;
+   font-size: 1.1rem;
+}
+
+.contact-item span {
+   font-family: 'JetBrains Mono', monospace;
+}
+
+.desktop-break {
+   display: block;
+}
+
+/* Footer */
+footer {
+   margin-top: 2rem;
+}
+
+.built-with {
+   text-align: center;
+   color: var(--text-dark);
+   font-size: 0.8rem;
+   font-family: 'JetBrains Mono', monospace;
+   margin: 2rem 0;
+   font-style: italic;
+   opacity: 0.7;
+}
+
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
    .container {
       flex-direction: column;
-      width: 100%;
-      background-color: #1B263B;
-      overflow: visible;
    }
 
    .left-side {
@@ -283,29 +336,40 @@ section::before {
       width: 100%;
       height: auto;
       padding: 1rem;
-      background-color: #1B263B;
       overflow: visible;
    }
 
    .right-side {
       margin-left: 0;
-      padding: 1rem;
       width: 100%;
-      background-color: #E0E1DD;
-      overflow-y: auto;
-      padding-bottom: 4rem;
+      padding: 1rem 1rem 4rem;
    }
 
    .profile {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
+      margin: 0 0 0.5rem;
       text-align: left;
       padding-left: 0.5rem;
    }
 
-   .profile-img {
-      width: 100px;
-      height: 100px;
+   .profile h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.4rem;
+   }
+
+   .title {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+   }
+
+   .tagline {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+   }
+
+   .navigation {
+      margin-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 0.5rem;
    }
 
    .navigation ul {
@@ -323,36 +387,19 @@ section::before {
 
    .navigation a {
       text-align: left;
-      color: #E0E1DD;
       font-size: 1.1rem;
-      transition: color 0.3s ease;
-      position: relative;
-   }
-
-   .navigation a:hover {
-      color: #778DA9;
    }
 
    .navigation a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
       bottom: -2px;
       left: 0;
-      background-color: #778DA9;
-      transition: all 0.3s ease;
-   }
-
-   .navigation a:hover::after {
-      width: 100%;
+      transform: none;
    }
 
    .social-links {
       position: absolute;
       bottom: 0.5rem;
       right: 0.5rem;
-      transform: none;
       margin: 0;
       padding: 0;
       display: flex;
@@ -388,47 +435,12 @@ section::before {
       font-size: 18px;
    }
 
-   .navigation {
-      margin-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      padding-left: 0.5rem;
-   }
-
-   .desktop-break {
-      display: none;
-   }
-
-   .contact-item {
-      margin-bottom: 0;
-   }
-
    .contact-item span {
       display: none;
    }
 
-   .contact-item i {
-      margin-right: 0;
-      font-size: 24px;
-   }
-
-   .built-with {
-      margin: 1rem 0;
-      font-size: 0.8rem;
-   }
-
-   .profile h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.4rem;
-   }
-
-   .title {
-      font-size: 1.2rem;
-      margin-bottom: 0.3rem;
-   }
-
-   .tagline {
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
+   .desktop-break {
+      display: none;
    }
 
    .right-side h2 {
@@ -443,7 +455,6 @@ section::before {
 
    .project-card h3 {
       font-size: 1.2rem;
-      margin-bottom: 0.5rem;
    }
 
    .project-card p {
@@ -458,56 +469,4 @@ section::before {
       margin-bottom: 2rem;
       padding: 1.5rem;
    }
-}
-
-/* Fix for iOS overscroll */
-body {
-   overscroll-behavior: none;
-   -webkit-overflow-scrolling: touch;
-}
-
-.desktop-break {
-   display: block;
-}
-
-/* Contact links styles */
-.contact-links {
-   margin-top: 0.2rem;
-   padding: 0 1.5rem;
-   text-align: center;
-   margin-bottom: 0.3rem;
-}
-
-.contact-item {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   color: #E0E1DD;
-   text-decoration: none;
-   margin-bottom: 1rem;
-   transition: color 0.3s ease;
-   font-size: 0.9rem;
-}
-
-.contact-item:hover {
-   color: #778DA9;
-}
-
-.contact-item i {
-   margin-right: 0.8rem;
-   font-size: 1.1rem;
-}
-
-.contact-item span {
-   font-family: 'JetBrains Mono', monospace;
-}
-
-.built-with {
-   text-align: center;
-   color: #0D1B2A;
-   font-size: 0.8rem;
-   font-family: 'JetBrains Mono', monospace;
-   margin: 2rem 0;
-   font-style: italic;
-   opacity: 0.7;
 }
