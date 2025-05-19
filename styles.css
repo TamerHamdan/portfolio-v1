@@ -60,11 +60,19 @@ body {
 .profile h1 {
    font-size: 1.8rem;
    margin-bottom: 0.5rem;
+   color: #E0E1DD;
 }
 
 .title {
    color: #E0E1DD;
    font-size: 1.1rem;
+}
+
+.tagline {
+   color: #778DA9;
+   font-size: 1rem;
+   margin-bottom: 0.5rem;
+   font-style: italic;
 }
 
 .navigation ul {
@@ -184,6 +192,18 @@ section {
    border-radius: 8px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
    width: 100%;
+   position: relative;
+}
+
+section::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 4px;
+   background-color: #415A77;
+   border-radius: 8px 8px 0 0;
 }
 
 /* Project grid */
@@ -266,6 +286,10 @@ section {
       gap: 1rem;
       align-items: center;
    }
+
+   .desktop-break {
+      display: none;
+   }
 }
 
 /* Smooth scrolling */
@@ -278,4 +302,8 @@ html {
 body {
    overscroll-behavior: none;
    -webkit-overflow-scrolling: touch;
+}
+
+.desktop-break {
+   display: block;
 }
