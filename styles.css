@@ -14,6 +14,8 @@
 /* Smooth scrolling */
 html {
    scroll-behavior: smooth;
+   -webkit-text-size-adjust: 100%;
+   -webkit-tap-highlight-color: transparent;
 }
 
 /* Reset default styles */
@@ -21,6 +23,7 @@ html {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
 }
 
 /* Document setup */
@@ -31,6 +34,7 @@ body {
    background-color: var(--primary-bg);
    overflow-x: hidden;
    scroll-behavior: smooth;
+   position: relative;
 }
 
 body {
@@ -42,6 +46,7 @@ body {
    overflow-y: auto;
    -webkit-overflow-scrolling: touch;
    overscroll-behavior: none;
+   touch-action: manipulation;
 }
 
 /* Container layout */
@@ -67,6 +72,8 @@ body {
    justify-content: space-between;
    z-index: 10;
    overflow-y: auto;
+   -webkit-overflow-scrolling: touch;
+   touch-action: pan-y;
 }
 
 .profile {
@@ -190,6 +197,7 @@ body {
    -webkit-overflow-scrolling: touch;
    scroll-padding-top: 2rem;
    padding-bottom: 4rem;
+   touch-action: manipulation;
 }
 
 .right-side h2 {
@@ -329,6 +337,8 @@ footer {
 @media (max-width: 768px) {
    .container {
       flex-direction: column;
+      overflow-x: hidden;
+      width: 100%;
    }
 
    .left-side {
@@ -337,12 +347,14 @@ footer {
       height: auto;
       padding: 1rem;
       overflow: visible;
+      touch-action: manipulation;
    }
 
    .right-side {
       margin-left: 0;
       width: 100%;
       padding: 1rem 1rem 4rem;
+      overflow-x: hidden;
    }
 
    .profile {
