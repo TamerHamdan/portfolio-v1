@@ -346,6 +346,11 @@ section::before {
       margin-right: 0;
       font-size: 24px;
    }
+
+   .built-with {
+      margin: 1rem 0;
+      font-size: 0.7rem;
+   }
 }
 
 /* Fix for iOS overscroll */
@@ -387,4 +392,14 @@ body {
 
 .contact-item span {
    font-family: 'JetBrains Mono', monospace;
+}
+
+.built-with {
+   text-align: center;
+   color: #0D1B2A;
+   font-size: 0.8rem;
+   font-family: 'JetBrains Mono', monospace;
+   margin: 2rem 0;
+   font-style: italic;
+   opacity: 0.7;
 }
