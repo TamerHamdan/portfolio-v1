@@ -339,6 +339,7 @@ footer {
       flex-direction: column;
       overflow-x: hidden;
       width: 100%;
+      position: relative;
    }
 
    .left-side {
@@ -348,6 +349,7 @@ footer {
       padding: 1rem;
       overflow: visible;
       touch-action: manipulation;
+      z-index: 1;
    }
 
    .right-side {
@@ -355,6 +357,7 @@ footer {
       width: 100%;
       padding: 1rem 1rem 4rem;
       overflow-x: hidden;
+      position: relative;
    }
 
    .profile {
@@ -408,31 +411,38 @@ footer {
       transform: none;
    }
 
-   .social-links {
-      position: absolute;
-      bottom: 0.5rem;
-      right: 0.5rem;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      align-items: center;
-   }
-
-   .social-links i {
-      font-size: 20px;
-   }
-
    .contact-links {
-      position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: row;
       gap: 0.4rem;
+      z-index: 100;
+      background-color: var(--primary-bg);
+      padding: 0.5rem;
+      border-radius: var(--border-radius);
+   }
+
+   .social-links {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      margin: 0;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      gap: 0.4rem;
+      align-items: center;
+      z-index: 100;
+      background-color: var(--primary-bg);
+      border-radius: var(--border-radius);
+   }
+
+   .social-links i {
+      font-size: 20px;
    }
 
    .contact-item {
