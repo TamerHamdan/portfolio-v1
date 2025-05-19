@@ -217,11 +217,17 @@ section::before {
    background-color: #E0E1DD;
    padding: 1.5rem;
    border-radius: 6px;
-   transition: transform 0.3s ease;
+   transition: all 0.3s ease;
 }
 
 .project-card:hover {
    transform: translateY(-5px);
+   background-color: #415A77;
+   color: #E0E1DD;
+}
+
+.project-card:hover h3 {
+   color: #E0E1DD;
 }
 
 /* Skills grid */
