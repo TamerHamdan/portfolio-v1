@@ -617,19 +617,18 @@ footer {
    opacity: 0;
    visibility: hidden;
    transition: var(--transition);
-   margin-top: 8px;
+   margin-top: 0;
    pointer-events: none;
    padding: 4px;
 }
 
-/* Add invisible padding to create hover-safe area */
 .resume-dropdown-content::before {
    content: '';
    position: absolute;
-   top: -8px;
+   top: 0;
    left: 0;
    right: 0;
-   height: 8px;
+   height: 0;
    background: transparent;
 }
 
