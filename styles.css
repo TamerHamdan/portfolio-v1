@@ -372,6 +372,7 @@ footer {
       width: 100%;
       height: auto;
       padding: 1rem;
+      overflow: hidden;
    }
 
    .right-side {
@@ -464,6 +465,11 @@ footer {
       padding: 0;
       display: flex;
       justify-content: flex-end;
+      order: 2;
+   }
+
+   .resume-dropdown {
+      order: 1;
    }
 
    .contact-item i {
@@ -561,6 +567,11 @@ footer {
    outline: none;
 }
 
+.resume-btn i.fa-chevron-down {
+   order: -1;
+   margin-right: 8px;
+}
+
 .resume-dropdown-content {
    position: absolute;
    left: 50%;
@@ -638,21 +649,19 @@ footer {
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
+      border-radius: 4px;
+      transition: all 0.2s ease;
    }
 
    .resume-toggle:checked~.resume-dropdown-content {
       opacity: 1;
       visibility: visible;
       pointer-events: auto;
+      transform: translateX(-50%) translateY(8px);
    }
 
    .resume-toggle:checked~.overlay {
-      display: block;
-   }
-
-   .resume-dropdown-content a {
-      padding: 12px 16px;
-      justify-content: flex-start;
+      display: none;
    }
 
    .resume-btn {
@@ -661,6 +670,22 @@ footer {
       align-items: center;
       justify-content: center;
       width: 100%;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+   }
+
+   .resume-btn i.fa-chevron-down {
+      order: -1;
+      margin-right: 0;
+      font-size: 0.8em;
+   }
+
+   .resume-toggle:checked+.resume-btn {
+      color: var(--accent-light);
+   }
+
+   .resume-btn:active {
+      background-color: var(--accent);
    }
 
    .resume-btn span {
