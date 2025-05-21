@@ -19,5 +19,6 @@
   <!-- Clean mono T -->
   <text x="50" y="65" font-size="52" text-anchor="middle" fill="#f1f5f9"
         font-family="JetBrains Mono, monospace"
-        font-weight="500">𝐓</text>
+        font-weight="500">T</text>
+        
 </svg>
