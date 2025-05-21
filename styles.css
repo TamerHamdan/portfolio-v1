@@ -273,6 +273,31 @@ section::before {
    border-radius: 4px;
    text-align: center;
    font-weight: 500;
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+}
+
+.skill:hover {
+   background-color: var(--accent-light);
+   transform: translateY(-2px);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+   transform: translateX(-100%);
+   transition: transform 0.6s ease;
+}
+
+.skill:hover::after {
+   transform: translateX(100%);
 }
 
 /* Contact links styles */
