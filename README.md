@@ -2,7 +2,7 @@
 
 # Portfolio V1
 
-A minimalistic portfolio website built with pure HTML and CSS. This is my first website ever published on the web — the beginning of my web development journey.
+A minimalistic portfolio website built with pure HTML and CSS. This is my first website ever published on the web, the beginning of my web development journey.
 
 https://tamerhamdan.github.io/portfolio/
 ### Why / Approach  
