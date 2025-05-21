@@ -6,8 +6,7 @@ https://tamerhamdan.com
 A minimalistic portfolio website built with pure HTML and CSS. This is my first website ever published on the web, the beginning of my web development journey.
 
 ### Why / Approach  
-Decision paralysis hit me hard on this one. React? Tailwind? Next.js? Nah. HTML + CSS = done.
-Learned solid web dev foundations, and it got me excited to dive into JS maybe some Tailwind.
+Instead of jumping straight into frameworks, I chose to start with the basics. Building this portfolio with pure HTML and CSS helped me learn solid fundamentals of web development. It's a simple approach that gives me a strong foundation for learning more advanced technologies later. Now I'm excited to dive into JavaScript and maybe some Tailwind CSS—and I truly appreciate why tools like these exist.
 
 ---
 
