@@ -519,6 +519,34 @@ footer {
    .built-with {
       font-size: 0.75rem;
    }
+
+   .resume-btn {
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+   }
+
+   .resume-toggle:checked+.resume-btn {
+      color: var(--accent-light);
+   }
+
+   .resume-toggle:not(:checked)+.resume-btn {
+      color: var(--text-light);
+   }
+
+   .resume-btn:active {
+      background-color: var(--accent);
+   }
+
+   .resume-btn i.fa-chevron-down {
+      order: -1;
+      margin-right: 0;
+      font-size: 0.8em;
+   }
 }
 
 /* Resume Dropdown Styles */
@@ -601,7 +629,7 @@ footer {
 
 .resume-dropdown-content a {
    color: inherit;
-   padding: 12px 16px;
+   padding: 8px 12px;
    text-decoration: none;
    display: flex;
    align-items: center;
@@ -609,6 +637,8 @@ footer {
    gap: 8px;
    white-space: nowrap;
    transition: all 0.2s ease;
+   border-radius: 4px;
+   margin: 0 4px;
 }
 
 .resume-dropdown-content a:hover {
@@ -643,7 +673,7 @@ footer {
       left: 50%;
       transform: translateX(-50%);
       width: auto;
-      min-width: 200px;
+      min-width: 180px;
       background-color: var(--primary-bg);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       opacity: 0;
@@ -651,6 +681,7 @@ footer {
       pointer-events: none;
       border-radius: 4px;
       transition: all 0.2s ease;
+      padding: 4px;
    }
 
    .resume-toggle:checked~.resume-dropdown-content {
@@ -674,14 +705,12 @@ footer {
       transition: all 0.2s ease;
    }
 
-   .resume-btn i.fa-chevron-down {
-      order: -1;
-      margin-right: 0;
-      font-size: 0.8em;
-   }
-
    .resume-toggle:checked+.resume-btn {
       color: var(--accent-light);
+   }
+
+   .resume-toggle:not(:checked)+.resume-btn {
+      color: var(--text-light);
    }
 
    .resume-btn:active {
@@ -695,5 +724,17 @@ footer {
    .resume-btn i {
       margin: 0;
       font-size: 1.2rem;
+   }
+
+   .resume-dropdown-content a {
+      padding: 8px 12px;
+      justify-content: flex-start;
+      margin: 0 2px;
+   }
+
+   .resume-btn i.fa-chevron-down {
+      order: -1;
+      margin-right: 0;
+      font-size: 0.8em;
    }
 }
