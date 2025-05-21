@@ -528,6 +528,7 @@ footer {
       width: 100%;
       border-radius: 4px;
       transition: all 0.2s ease;
+      color: var(--text-light);
    }
 
    .resume-toggle:checked+.resume-btn {
@@ -540,6 +541,14 @@ footer {
 
    .resume-btn:active {
       background-color: var(--accent);
+   }
+
+   .resume-toggle:checked~.overlay {
+      display: block;
+   }
+
+   .resume-toggle:not(:checked)~.overlay {
+      display: none;
    }
 
    .resume-btn i.fa-chevron-down {
@@ -614,6 +623,7 @@ footer {
    transition: var(--transition);
    margin-top: 8px;
    pointer-events: none;
+   padding: 4px;
 }
 
 /* Add invisible padding to create hover-safe area */
@@ -639,6 +649,7 @@ footer {
    transition: all 0.2s ease;
    border-radius: 4px;
    margin: 0 4px;
+   width: calc(100% - 8px);
 }
 
 .resume-dropdown-content a:hover {
@@ -673,7 +684,7 @@ footer {
       left: 50%;
       transform: translateX(-50%);
       width: auto;
-      min-width: 180px;
+      min-width: 160px;
       background-color: var(--primary-bg);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       opacity: 0;
@@ -703,6 +714,7 @@ footer {
       width: 100%;
       border-radius: 4px;
       transition: all 0.2s ease;
+      color: var(--text-light);
    }
 
    .resume-toggle:checked+.resume-btn {
@@ -715,6 +727,14 @@ footer {
 
    .resume-btn:active {
       background-color: var(--accent);
+   }
+
+   .resume-toggle:checked~.overlay {
+      display: block;
+   }
+
+   .resume-toggle:not(:checked)~.overlay {
+      display: none;
    }
 
    .resume-btn span {
@@ -730,6 +750,7 @@ footer {
       padding: 8px 12px;
       justify-content: flex-start;
       margin: 0 2px;
+      width: calc(100% - 4px);
    }
 
    .resume-btn i.fa-chevron-down {
