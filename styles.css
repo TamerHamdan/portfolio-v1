@@ -517,6 +517,10 @@ footer {
    text-align: center;
 }
 
+.resume-toggle {
+   display: none;
+}
+
 .resume-btn {
    display: inline-flex;
    align-items: center;
@@ -530,10 +534,17 @@ footer {
    cursor: pointer;
    font-size: inherit;
    text-align: center;
+   transition: var(--transition);
+   position: relative;
+}
+
+.resume-btn:hover,
+.resume-btn:focus {
+   color: var(--accent-light);
+   outline: none;
 }
 
 .resume-dropdown-content {
-   display: none;
    position: absolute;
    left: 50%;
    transform: translateX(-50%);
@@ -542,6 +553,22 @@ footer {
    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
    z-index: 1;
    border-radius: 4px;
+   opacity: 0;
+   visibility: hidden;
+   transition: var(--transition);
+   margin-top: 8px;
+   pointer-events: none;
+}
+
+/* Add invisible padding to create hover-safe area */
+.resume-dropdown-content::before {
+   content: '';
+   position: absolute;
+   top: -8px;
+   left: 0;
+   right: 0;
+   height: 8px;
+   background: transparent;
 }
 
 .resume-dropdown-content a {
@@ -569,13 +596,22 @@ footer {
    transform: scale(1.1);
 }
 
-/* Change hover behavior to only trigger on button */
-.resume-btn:hover+.resume-dropdown-content,
-.resume-dropdown-content:hover {
-   display: block;
+/* Desktop hover behavior */
+@media (hover: hover) {
+
+   .resume-btn:hover+.resume-dropdown-content,
+   .resume-dropdown-content:hover {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+   }
+
+   .resume-btn:hover i.fa-chevron-down {
+      transform: rotate(180deg);
+   }
 }
 
-/* Mobile Styles */
+/* Mobile behavior */
 @media (max-width: 768px) {
    .resume-dropdown-content {
       position: absolute;
@@ -586,17 +622,20 @@ footer {
       min-width: 200px;
       background-color: var(--primary-bg);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
    }
 
-   .resume-dropdown.active .resume-dropdown-content {
-      display: block;
+   .resume-toggle:checked~.resume-dropdown-content {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
    }
 
    .resume-dropdown-content a {
       padding: 12px 16px;
       justify-content: flex-start;
-      transition: none;
    }
 
    .resume-btn {
@@ -604,7 +643,7 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: none;
+      width: 100%;
    }
 
    .resume-btn span {
@@ -616,17 +655,11 @@ footer {
       font-size: 1.2rem;
    }
 
-   /* Remove flashy effects */
-   .resume-btn:active,
-   .resume-dropdown-content a:active {
-      background-color: transparent;
+   .resume-btn i.fa-chevron-down {
+      transition: transform 0.3s ease;
    }
 
-   .resume-dropdown-content a:hover {
-      transform: none;
-   }
-
-   .resume-dropdown-content a i {
-      transform: none;
+   .resume-toggle:checked~.resume-btn i.fa-chevron-down {
+      transform: rotate(180deg);
    }
 }

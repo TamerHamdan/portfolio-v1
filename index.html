@@ -46,11 +46,12 @@
                     <span>tamerh.bus@gmail.com</span>
                 </a>
                 <div class="resume-dropdown">
-                    <button class="resume-btn">
+                    <input type="checkbox" id="resume-toggle" class="resume-toggle">
+                    <label for="resume-toggle" class="resume-btn">
                         <i class="fas fa-file-alt" aria-hidden="true"></i>
                         <span>Resume</span>
                         <i class="fas fa-chevron-down"></i>
-                    </button>
+                    </label>
                     <div class="resume-dropdown-content">
                         <a href="resumes/resumeENG.pdf" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-file-alt" aria-hidden="true"></i>
@@ -137,20 +138,6 @@
 
         </main>
     </div>
-    <script>
-        // Handle mobile dropdown
-        document.querySelector('.resume-btn').addEventListener('click', function (e) {
-            e.stopPropagation();
-            this.parentElement.classList.toggle('active');
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function (e) {
-            if (!e.target.closest('.resume-dropdown')) {
-                document.querySelector('.resume-dropdown').classList.remove('active');
-            }
-        });
-    </script>
 </body>
 
 </html>
