@@ -527,16 +527,22 @@ footer {
       justify-content: center;
       width: 100%;
       border-radius: 4px;
-      transition: all 0.2s ease;
       color: var(--text-light);
+   }
+
+   .resume-btn:active,
+   .resume-toggle:checked+.resume-btn:active {
+      background-color: var(--accent);
+   }
+
+   .resume-btn:hover {
+      color: var(--text-light);
+      background-color: transparent;
    }
 
    .resume-toggle:checked+.resume-btn {
       color: var(--text-light);
-   }
-
-   .resume-btn:active {
-      background-color: var(--accent);
+      background-color: transparent;
    }
 
    .resume-toggle:checked~.overlay {
@@ -708,16 +714,22 @@ footer {
       justify-content: center;
       width: 100%;
       border-radius: 4px;
-      transition: all 0.2s ease;
       color: var(--text-light);
+   }
+
+   .resume-btn:active,
+   .resume-toggle:checked+.resume-btn:active {
+      background-color: var(--accent);
+   }
+
+   .resume-btn:hover {
+      color: var(--text-light);
+      background-color: transparent;
    }
 
    .resume-toggle:checked+.resume-btn {
       color: var(--text-light);
-   }
-
-   .resume-btn:active {
-      background-color: var(--accent);
+      background-color: transparent;
    }
 
    .resume-toggle:checked~.overlay {
