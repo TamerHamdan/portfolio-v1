@@ -367,6 +367,8 @@ footer {
 @media (max-width: 768px) {
    .container {
       flex-direction: column;
+      min-height: 100vh;
+      overflow-y: auto;
    }
 
    .left-side {
@@ -381,6 +383,8 @@ footer {
       margin-left: 0;
       width: 100%;
       padding: 1rem 1rem 4rem;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
    }
 
    .profile {
