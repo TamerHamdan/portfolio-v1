@@ -12,8 +12,8 @@ Learned solid web dev foundations, and it got me excited to dive into JS maybe s
 ---
 
 <p align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: nowrap;">
-  <img src="https://github.com/TamerHamdan/images/raw/main/screenshots/portfolio.png" alt="Portfolio Desktop" height="300" style="border-radius: 8px;" />
-  <img src="https://github.com/TamerHamdan/images/raw/main/screenshots/portfolioMobile.png" alt="Portfolio Mobile" height="300" style="border-radius: 8px;" />
+  <img src="https://github.com/TamerHamdan/screenshots/blob/main/portfolio/portfolio.png?raw=true" alt="Portfolio Desktop" height="300" style="border-radius: 8px;" />
+  <img src="https://github.com/TamerHamdan/screenshots/blob/main/portfolio/portfolioMobile.png?raw=true" alt="Portfolio Mobile" height="300" style="border-radius: 8px;" />
 </p>
 
 ---
