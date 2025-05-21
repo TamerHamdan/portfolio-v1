@@ -240,6 +240,13 @@ section::before {
    transition: var(--transition);
 }
 
+.project-card a {
+   text-decoration: none;
+   color: inherit;
+   display: block;
+   height: 100%;
+}
+
 .project-card:hover {
    transform: translateY(-5px);
    background-color: var(--accent);
@@ -556,16 +563,14 @@ footer {
    transform: scale(1.1);
 }
 
-.resume-dropdown:hover .resume-dropdown-content {
+/* Change hover behavior to only trigger on button */
+.resume-btn:hover+.resume-dropdown-content,
+.resume-dropdown-content:hover {
    display: block;
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-   .resume-dropdown {
-      position: relative;
-   }
-
    .resume-dropdown-content {
       position: absolute;
       top: 100%;
