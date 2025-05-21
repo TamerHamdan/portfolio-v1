@@ -532,10 +532,6 @@ footer {
    }
 
    .resume-toggle:checked+.resume-btn {
-      color: var(--accent-light);
-   }
-
-   .resume-toggle:not(:checked)+.resume-btn {
       color: var(--text-light);
    }
 
@@ -718,10 +714,6 @@ footer {
    }
 
    .resume-toggle:checked+.resume-btn {
-      color: var(--accent-light);
-   }
-
-   .resume-toggle:not(:checked)+.resume-btn {
       color: var(--text-light);
    }
 
