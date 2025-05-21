@@ -4,7 +4,7 @@
 
 A minimalistic portfolio website built with pure HTML and CSS. This is my first website ever published on the web, the beginning of my web development journey.
 
-https://tamerhamdan.github.io/portfolio/
+https://tamerhamdan.com
 ### Why / Approach  
 Decision paralysis hit me hard on this one. React? Tailwind? Next.js? Nah. HTML + CSS = done.
 Learned solid web dev foundations, and it got me excited to dive into JS maybe some Tailwind.
@@ -25,6 +25,7 @@ Learned solid web dev foundations, and it got me excited to dive into JS maybe s
 - Skills display
 
 ## Tech
+- Hosted on Github Pages
 - Pure HTML5
 - Pure CSS3
 
