@@ -1,18 +1,21 @@
-# WORK IN PROGRESS # 
-# Portfolio V1 
+# WORK IN PROGRESS
 
-A minimalistic portfolio website built with pure HTML and CSS. This is my first website ever published on the web, the beginning of my web development journey.
+# Portfolio V1
 
-### Why / Approach 
-Decision paralysis hit me hard on this one. React? Tailwind? Next.js? Nah. HTML + CSS = done, Learned decent web dev foundations. 
+A minimalistic portfolio website built with pure HTML and CSS. This is my first website ever published on the web — the beginning of my web development journey.
 
-#
-<p align="center">
-  <img src="https://github.com/TamerHamdan/images/raw/main/screenshots/portfolio.png" height="400px" style="margin-right: 10px;" />
-  <img src="https://github.com/TamerHamdan/images/raw/main/screenshots/portfolioMobile.png" height="400px" />
+https://tamerhamdan.github.io/portfolio/
+### Why / Approach  
+Decision paralysis hit me hard on this one. React? Tailwind? Next.js? Nah. HTML + CSS = done. Learned solid web dev foundations.
+
+---
+
+<p align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: nowrap;">
+  <img src="https://github.com/TamerHamdan/images/raw/main/screenshots/portfolio.png" alt="Portfolio Desktop" height="300" style="border-radius: 8px;" />
+  <img src="https://github.com/TamerHamdan/images/raw/main/screenshots/portfolioMobile.png" alt="Portfolio Mobile" height="300" style="border-radius: 8px;" />
 </p>
 
-#
+---
 
 ## Features
 - Responsive design
