@@ -521,6 +521,16 @@ footer {
    display: none;
 }
 
+.overlay {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 0;
+}
+
 .resume-btn {
    display: inline-flex;
    align-items: center;
@@ -536,6 +546,7 @@ footer {
    text-align: center;
    transition: var(--transition);
    position: relative;
+   z-index: 2;
 }
 
 .resume-btn:hover,
@@ -605,10 +616,6 @@ footer {
       visibility: visible;
       pointer-events: auto;
    }
-
-   .resume-btn:hover i.fa-chevron-down {
-      transform: rotate(180deg);
-   }
 }
 
 /* Mobile behavior */
@@ -633,6 +640,10 @@ footer {
       pointer-events: auto;
    }
 
+   .resume-toggle:checked~.overlay {
+      display: block;
+   }
+
    .resume-dropdown-content a {
       padding: 12px 16px;
       justify-content: flex-start;
@@ -653,13 +664,5 @@ footer {
    .resume-btn i {
       margin: 0;
       font-size: 1.2rem;
-   }
-
-   .resume-btn i.fa-chevron-down {
-      transition: transform 0.3s ease;
-   }
-
-   .resume-toggle:checked~.resume-btn i.fa-chevron-down {
-      transform: rotate(180deg);
    }
 }
