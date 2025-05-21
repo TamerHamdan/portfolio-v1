@@ -1,10 +1,10 @@
 # WORK IN PROGRESS
 
 # Portfolio V1
+https://tamerhamdan.com
 
 A minimalistic portfolio website built with pure HTML and CSS. This is my first website ever published on the web, the beginning of my web development journey.
 
-https://tamerhamdan.com
 ### Why / Approach  
 Decision paralysis hit me hard on this one. React? Tailwind? Next.js? Nah. HTML + CSS = done.
 Learned solid web dev foundations, and it got me excited to dive into JS maybe some Tailwind.
