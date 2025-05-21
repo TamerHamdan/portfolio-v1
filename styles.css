@@ -31,7 +31,6 @@ body {
    background-color: var(--primary-bg);
    overflow-x: hidden;
    scroll-behavior: smooth;
-   position: relative;
 }
 
 body {
@@ -42,17 +41,14 @@ body {
    min-height: 100%;
    overflow-y: auto;
    -webkit-overflow-scrolling: touch;
-   overscroll-behavior: none;
 }
 
 /* Container layout */
 .container {
    display: flex;
-   min-height: 100vh;
    width: 100%;
    position: relative;
    background-color: var(--primary-bg);
-   overflow: visible;
 }
 
 /* Left side styles */
@@ -368,9 +364,7 @@ footer {
 @media (max-width: 768px) {
    .container {
       flex-direction: column;
-      min-height: 100%;
-      position: relative;
-      overflow: visible;
+      display: block;
    }
 
    .left-side {
@@ -378,15 +372,13 @@ footer {
       width: 100%;
       height: auto;
       padding: 1rem;
-      overflow: visible;
    }
 
    .right-side {
       margin-left: 0;
       width: 100%;
-      padding: 1rem 1rem 4rem;
-      position: relative;
-      overflow: visible;
+      padding: 1rem;
+      padding-bottom: 2rem;
    }
 
    .profile {
@@ -396,18 +388,18 @@ footer {
    }
 
    .profile h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.4rem;
-   }
-
-   .title {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-bottom: 0.3rem;
    }
 
-   .tagline {
+   .title {
       font-size: 1rem;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.2rem;
+   }
+
+   .tagline {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
    }
 
    .navigation {
@@ -431,7 +423,7 @@ footer {
 
    .navigation a {
       text-align: left;
-      font-size: 1.1rem;
+      font-size: 0.95rem;
    }
 
    .navigation a::after {
@@ -488,30 +480,38 @@ footer {
    }
 
    .right-side h2 {
-      font-size: 1.6rem;
-      margin-bottom: 1.2rem;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
    }
 
    .right-side p {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       line-height: 1.5;
    }
 
    .project-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
    }
 
    .project-card p {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
    }
 
    .skill {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
    }
 
    section {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       padding: 1.5rem;
+   }
+
+   footer {
+      margin-top: 1rem;
+   }
+
+   .built-with {
+      font-size: 0.75rem;
    }
 }
 
