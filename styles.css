@@ -11,19 +11,17 @@
    --transition: all 0.3s ease;
 }
 
-/* Smooth scrolling */
+/* Base Styles */
 html {
    scroll-behavior: smooth;
 }
 
-/* Reset default styles */
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
 
-/* Document setup */
 html,
 body {
    height: 100%;
@@ -43,7 +41,7 @@ body {
    -webkit-overflow-scrolling: touch;
 }
 
-/* Container layout */
+/* Layout */
 .container {
    display: flex;
    width: 100%;
@@ -51,7 +49,7 @@ body {
    background-color: var(--primary-bg);
 }
 
-/* Left side styles */
+/* Left Side */
 .left-side {
    width: 30%;
    background-color: var(--primary-bg);
@@ -66,6 +64,7 @@ body {
    overflow-y: auto;
 }
 
+/* Profile Section */
 .profile {
    text-align: center;
    margin-top: 2rem;
@@ -135,7 +134,7 @@ body {
    width: 100%;
 }
 
-/* Social links */
+/* Social Links */
 .social-links {
    display: flex;
    justify-content: center;
@@ -173,7 +172,7 @@ body {
    transform: translateY(-2px);
 }
 
-/* Right side styles */
+/* Right Side */
 .right-side {
    flex: 1;
    margin-left: 30%;
@@ -206,7 +205,7 @@ body {
    margin-bottom: 0;
 }
 
-/* Section styling */
+/* Sections */
 section {
    margin-bottom: 3rem;
    padding: 2rem;
@@ -229,7 +228,7 @@ section::before {
    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
-/* Project grid */
+/* Project Grid */
 .project-grid {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -269,7 +268,7 @@ section::before {
    font-size: 0.95rem;
 }
 
-/* Skills grid */
+/* Skills Grid */
 .skills-grid {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -310,7 +309,7 @@ section::before {
    transform: translateX(100%);
 }
 
-/* Contact links styles */
+/* Contact Links */
 .contact-links {
    margin: 0.2rem 0 0.3rem;
    padding: 0 1.5rem;
@@ -360,7 +359,119 @@ footer {
    opacity: 0.7;
 }
 
-/* Media Queries for Responsive Design */
+/* Resume Dropdown */
+.resume-dropdown {
+   position: relative;
+   display: inline-block;
+   width: 100%;
+   text-align: center;
+}
+
+.resume-toggle {
+   display: none;
+}
+
+.overlay {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 0;
+}
+
+.resume-btn {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   width: auto;
+   padding: 8px 12px;
+   background: none;
+   border: none;
+   color: inherit;
+   cursor: pointer;
+   font-size: inherit;
+   text-align: center;
+   transition: var(--transition);
+   position: relative;
+   z-index: 2;
+}
+
+.resume-btn:hover,
+.resume-btn:focus {
+   color: var(--accent-light);
+   outline: none;
+}
+
+.resume-dropdown-content {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: var(--primary-bg);
+   min-width: 160px;
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+   border-radius: 4px;
+   opacity: 0;
+   visibility: hidden;
+   transition: var(--transition);
+   margin-top: 0;
+   pointer-events: none;
+   padding: 4px;
+}
+
+.resume-dropdown-content::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 0;
+   background: transparent;
+}
+
+.resume-dropdown-content a {
+   color: inherit;
+   padding: 8px 12px;
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   white-space: nowrap;
+   transition: all 0.2s ease;
+   border-radius: 4px;
+   margin: 0 4px;
+   width: calc(100% - 8px);
+}
+
+.resume-dropdown-content a:hover {
+   background-color: var(--accent);
+   transform: translateX(4px);
+}
+
+.resume-dropdown-content a i {
+   transition: transform 0.2s ease;
+}
+
+.resume-dropdown-content a:hover i {
+   transform: scale(1.1);
+}
+
+/* Desktop Hover Behavior */
+@media (hover: hover) {
+
+   .resume-btn:hover+.resume-dropdown-content,
+   .resume-dropdown-content:hover {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+   }
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
    .container {
       flex-direction: column;
@@ -518,167 +629,10 @@ footer {
 
    .built-with {
       font-size: 0.75rem;
+      margin: 1rem 0;
    }
 
-   .resume-btn {
-      padding: 4px 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      border-radius: 4px;
-      color: var(--text-light);
-   }
-
-   .resume-btn:active,
-   .resume-toggle:checked+.resume-btn:active {
-      background-color: var(--accent);
-   }
-
-   .resume-btn:hover {
-      color: var(--text-light);
-      background-color: transparent;
-   }
-
-   .resume-toggle:checked+.resume-btn {
-      color: var(--text-light);
-      background-color: transparent;
-   }
-
-   .resume-toggle:checked~.overlay {
-      display: block;
-   }
-
-   .resume-toggle:not(:checked)~.overlay {
-      display: none;
-   }
-
-   .resume-btn i.fa-chevron-down {
-      order: -1;
-      margin-right: 0;
-      font-size: 0.8em;
-   }
-}
-
-/* Resume Dropdown Styles */
-.resume-dropdown {
-   position: relative;
-   display: inline-block;
-   width: 100%;
-   text-align: center;
-}
-
-.resume-toggle {
-   display: none;
-}
-
-.overlay {
-   display: none;
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   z-index: 0;
-}
-
-.resume-btn {
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   gap: 8px;
-   width: auto;
-   padding: 8px 12px;
-   background: none;
-   border: none;
-   color: inherit;
-   cursor: pointer;
-   font-size: inherit;
-   text-align: center;
-   transition: var(--transition);
-   position: relative;
-   z-index: 2;
-}
-
-.resume-btn:hover,
-.resume-btn:focus {
-   color: var(--accent-light);
-   outline: none;
-}
-
-.resume-btn i.fa-chevron-down {
-   order: -1;
-   margin-right: 8px;
-}
-
-.resume-dropdown-content {
-   position: absolute;
-   left: 50%;
-   transform: translateX(-50%);
-   background-color: var(--primary-bg);
-   min-width: 160px;
-   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-   z-index: 1;
-   border-radius: 4px;
-   opacity: 0;
-   visibility: hidden;
-   transition: var(--transition);
-   margin-top: 0;
-   pointer-events: none;
-   padding: 4px;
-}
-
-.resume-dropdown-content::before {
-   content: '';
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   height: 0;
-   background: transparent;
-}
-
-.resume-dropdown-content a {
-   color: inherit;
-   padding: 8px 12px;
-   text-decoration: none;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 8px;
-   white-space: nowrap;
-   transition: all 0.2s ease;
-   border-radius: 4px;
-   margin: 0 4px;
-   width: calc(100% - 8px);
-}
-
-.resume-dropdown-content a:hover {
-   background-color: var(--accent);
-   transform: translateX(4px);
-}
-
-.resume-dropdown-content a i {
-   transition: transform 0.2s ease;
-}
-
-.resume-dropdown-content a:hover i {
-   transform: scale(1.1);
-}
-
-/* Desktop hover behavior */
-@media (hover: hover) {
-
-   .resume-btn:hover+.resume-dropdown-content,
-   .resume-dropdown-content:hover {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-   }
-}
-
-/* Mobile behavior */
-@media (max-width: 768px) {
+   /* Mobile Resume Dropdown */
    .resume-dropdown-content {
       position: absolute;
       top: 100%;
@@ -707,6 +661,13 @@ footer {
       display: none;
    }
 
+   .resume-dropdown-content a {
+      padding: 8px 12px;
+      justify-content: flex-start;
+      margin: 0 2px;
+      width: calc(100% - 4px);
+   }
+
    .resume-btn {
       padding: 4px 8px;
       display: flex;
@@ -732,12 +693,10 @@ footer {
       background-color: transparent;
    }
 
-   .resume-toggle:checked~.overlay {
-      display: block;
-   }
-
-   .resume-toggle:not(:checked)~.overlay {
-      display: none;
+   .resume-btn i.fa-chevron-down {
+      order: -1;
+      margin-right: 0;
+      font-size: 0.8em;
    }
 
    .resume-btn span {
@@ -747,18 +706,5 @@ footer {
    .resume-btn i {
       margin: 0;
       font-size: 1.2rem;
-   }
-
-   .resume-dropdown-content a {
-      padding: 8px 12px;
-      justify-content: flex-start;
-      margin: 0 2px;
-      width: calc(100% - 4px);
-   }
-
-   .resume-btn i.fa-chevron-down {
-      order: -1;
-      margin-right: 0;
-      font-size: 0.8em;
    }
 }
