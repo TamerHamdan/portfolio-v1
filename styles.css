@@ -201,6 +201,12 @@ body {
 
 .right-side p {
    font-weight: 400;
+   margin-bottom: 1.5rem;
+   line-height: 1.6;
+}
+
+.right-side p:last-child {
+   margin-bottom: 0;
 }
 
 /* Section styling */
