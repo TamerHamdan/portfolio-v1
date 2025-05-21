@@ -34,7 +34,7 @@
             <div class="profile">
                 <h1>Tamer Hamdan</h1>
                 <p class="title">Computer Science Student</p>
-                <p class="tagline">Crafting digital solutions with passion</p>
+                <p class="tagline">Crafting digital experiences with passion</p>
             </div>
             <nav class="navigation">
                 <ul>
@@ -134,6 +134,20 @@
 
         </main>
     </div>
+    <script>
+        // Handle mobile dropdown
+        document.querySelector('.resume-btn').addEventListener('click', function (e) {
+            e.stopPropagation();
+            this.parentElement.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.resume-dropdown')) {
+                document.querySelector('.resume-dropdown').classList.remove('active');
+            }
+        });
+    </script>
 </body>
 
 </html>
