@@ -325,6 +325,7 @@ section::before {
    margin-bottom: 1rem;
    transition: color 0.3s ease;
    font-size: 0.9rem;
+   gap: 0.5rem;
 }
 
 .contact-item:hover {
@@ -332,8 +333,9 @@ section::before {
 }
 
 .contact-item i {
-   margin-right: 0.8rem;
    font-size: 1.1rem;
+   display: inline-flex;
+   align-items: center;
 }
 
 .contact-item span {
@@ -385,7 +387,7 @@ footer {
    display: inline-flex;
    align-items: center;
    justify-content: center;
-   gap: 8px;
+   gap: 0.4rem;
    width: auto;
    padding: 8px 12px;
    background: none;
