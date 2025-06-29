@@ -33,7 +33,7 @@ Instead of jumping straight into frameworks, I chose to start with the basics. B
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/TamerHamdan/v1.git
+git clone https://github.com/buzzedowl/v1.git
 ```
 
 2. Open the project in your code editor and use the Live Server extension or just click the html file.
